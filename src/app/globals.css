@@ -30,3 +30,7 @@
   background-color: #f1f0ff !important;
   margin-left: 2px;
 }
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  box-shadow: 10px;
+}
