@@ -23,14 +23,15 @@ const data = [
 
 export default function CountChart() {
   return (
-    <div className="bg-white rounded-xl w-full h-full">
+    <div className="bg-white rounded-xl w-full h-full p-4">
       {/* title */}
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">Student</h1>
         <Image src="/moreDark.png" alt="" width={20} height={20} />
       </div>
+
       {/* chart */}
-      <div className=" relative w-full h-[70%]">
+      <div className="relative w-full h-[70%]">
         <ResponsiveContainer>
           <RadialBarChart
             cx="50%"
@@ -48,21 +49,27 @@ export default function CountChart() {
           alt=""
           width={50}
           height={50}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  "
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         />
       </div>
+
       {/* bottom */}
-      <div className="flex justify-center gap-16">
-        <div className="flex flex-col gap-1">
-          <div className="w-5 h-5 bg-lamaSky rounded-full">
-            <h1 className="font-bold">1,2544</h1>
-            <h2 className=" text-xs text-gray-300">boys (50%)</h2>
+      <div className="flex justify-center gap-12 mt-4">
+        {/* Boys */}
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 bg-lamaSky rounded-full"></div>
+          <div>
+            <h1 className="font-bold">360</h1>
+            <h2 className="text-xs text-gray-500">boys (40%)</h2>
           </div>
         </div>
-        <div className="flex flex-col gap-1">
-          <div className="w-5 h-5 bg-lamaYellow rounded-full">
-            <h1 className="font-bold">1,4544</h1>
-            <h2 className=" text-xs text-gray-300">grils (60%)</h2>
+
+        {/* Girls */}
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 bg-lamaYellow rounded-full"></div>
+          <div>
+            <h1 className="font-bold">14,544</h1>
+            <h2 className="text-xs text-gray-500">girls (70%)</h2>
           </div>
         </div>
       </div>
